@@ -1,5 +1,5 @@
 # LaTeX course : Beamer module
-LaTex Beamer module's sample files and figures:
+Module's sample files and figures:
 
 ## Goal:
 To build a simple presentation that helps us become familiar with:
