@@ -2,20 +2,21 @@
 LaTex Beamer module's sample files and figures:
 
 ## Goal:
-Build a simple presentation that contains:
-- S1 : Title page
-- S1 : Outline page
-- S1 : Introduction with Loren Lipsum
-- S1 : A frame that contains a list
-- S1 : A frame that contains a table
-- S1 : A frame with blocks
-- S1 : A frame with a code
-- S1 : A two-column frame that contains a figure
-- S2 : A frame with list with overlays
-- S2 : A frame with figures overlays
-- S3 : A frame with breaks
-- S3 : Introduce Fotenotes
-- S3 : Build a Bibliography with bibtex
+To build a simple presentation to become familiar with:
+- S1 : Title page,
+- S1 : Outline page,
+- S1 : Frame with a figures,
+- S1 : Frame with a tables,
+- S1 : Frame with blocks,
+- S1 : Frame with multiple columns,
+- S1 : Frame with breaks,
+
+- S2 : Frame with a code,
+- S2 : Frame with figures overlays,
+- S2 : The metropolis theme,
+
+- S3 : Fotenotes and
+- S3 : The Bibliography with bibtex.
 
 ## Starting hint:
 ```latex
@@ -58,7 +59,7 @@ Build a simple presentation that contains:
 
 \subsection{Method 2}
 \begin{frame}{Method 2}
-    I tried this other method. It worked by don't known why!?
+    I tried this other method. It worked but don't known why!?
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%
@@ -70,7 +71,7 @@ Build a simple presentation that contains:
 
 \end{document}
 ```
-
+## Complementary material in `figures/` : 
 <img src="./figures/Mach03.png" alt="Subsonic Monopole" width="200"/>
 <img src="./figures/Mach12.png" alt="Supersonic Monopole" width="197"/>
 
