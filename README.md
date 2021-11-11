@@ -2,7 +2,7 @@
 LaTex Beamer module's sample files and figures:
 
 ## Goal:
-To build a simple presentation to become familiar with:
+To build a simple presentation that helps us become familiar with:
 - S1 : Title page,
 - S1 : Outline page,
 - S1 : Frame with a figures,
@@ -15,8 +15,9 @@ To build a simple presentation to become familiar with:
 - S2 : Frame with figures overlays,
 - S2 : The metropolis theme,
 
-- S3 : Fotenotes and
-- S3 : The Bibliography with bibtex.
+- S3 : The Bibliography with bibtex, 
+- S3 : Fotenotes and references,
+- S3 : Handouts.
 
 ## Starting hint:
 ```latex
@@ -37,7 +38,7 @@ To build a simple presentation to become familiar with:
 \institute{University of Poitiers}
 \date{\today}
 
-% Beging document
+% Begin our document
 \begin{document}
 
 \begin{frame}
@@ -74,6 +75,8 @@ To build a simple presentation to become familiar with:
 ## Complementary material in `figures/` : 
 <img src="./figures/Mach03.png" alt="Subsonic Monopole" width="200"/>
 <img src="./figures/Mach12.png" alt="Supersonic Monopole" width="197"/>
+<img src="./figures/TeXlion.jpg" alt="TeX-logo" width="200"/>
+<img src="./figures/TecNM.png" alt="Uni-Logo" width="200"/>
 
 ## References
 1. The Beamer theme matrix by [hartwork.org](https://hartwork.org/beamer-theme-matrix/),
