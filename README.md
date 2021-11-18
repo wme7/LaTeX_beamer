@@ -3,6 +3,7 @@ LaTex Beamer module's sample files and figures:
 
 ## Goal:
 To build a simple presentation that helps us become familiar with:
+
 - S1 : Title page,
 - S1 : Outline page,
 - S1 : Frame with a figures,
@@ -11,13 +12,14 @@ To build a simple presentation that helps us become familiar with:
 - S1 : Frame with multiple columns,
 - S1 : Frame with breaks,
 
-- S2 : Frame with a code,
-- S2 : Frame with figures overlays,
-- S2 : The metropolis theme,
+- S2 : The Bibliography with biblatex, 
+- S2 : Fotenotes and references,
+- S2 : Handouts.
 
-- S3 : The Bibliography with bibtex, 
-- S3 : Fotenotes and references,
-- S3 : Handouts.
+- S3 : Frame with a code,
+- S3 : Frame with figures overlays,
+- S3 : The metropolis theme,
+
 
 ## Starting hint:
 ```latex
@@ -77,6 +79,12 @@ To build a simple presentation that helps us become familiar with:
 <img src="./figures/Mach12.png" alt="Supersonic Monopole" width="197"/>
 <img src="./figures/TeXlion.jpg" alt="TeX-logo" width="200"/>
 <img src="./figures/TecNM.png" alt="Uni-Logo" width="200"/>
+
+## Complementary material in `templates/` :
+Beamer templates with bibliography:
+- [template01.tex](/snippets/template_standardBib.tex) : a template with traditional bibliography footnotes.
+- [template02.tex](/snippets/template_hackedBid.tex) : a template with costum /cite function and built in bibliography.
+- [template03.tex](/snippets/template_fullHackedBid.tex) : a template with costum /cite function with bib-file.
 
 ## References
 1. The Beamer theme matrix by [hartwork.org](https://hartwork.org/beamer-theme-matrix/),

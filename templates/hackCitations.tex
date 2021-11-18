@@ -1,0 +1,57 @@
+% Hack based on discussion:
+% https://tex.stackexchange.com/questions/123104/inline-citations-with-only-author-title-and-year:
+%
+% Modified by Manuel A. Diaz, NTU 2013.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hack citation command starts: (Do not modify!)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Let beamer know that we will create a bibliography template:
+\setbeamertemplate{bibliography item}[text]
+
+% Create a custom \cite command
+\makeatletter
+\DeclareCiteCommand{\cite}[\mkbibsuperscript]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \usebibmacro{cite}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+% Renew the citation macro
+\renewbibmacro*{cite}{%
+  \printtext[bibhyperref]{%
+    \printfield{labelprefix}%
+    \printfield{labelnumber}%
+    \ifbool{bbx:subentry}{%
+        \printfield{entrysetcount}
+    }{}
+  }%
+  \footnotetext[\thefield{labelnumber}]{%
+    \usedriver{\DeclareNameAlias{sortname}{default}}{\thefield{entrytype}}
+  }%
+}
+
+% Declare a bibliography driver
+\DeclareBibliographyDriver{article}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/translator+others}%
+  \setunit{\printdelim{nametitledelim}}\newblock
+  \usebibmacro{title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{date}%
+  \usebibmacro{finentry}}
+\makeatother
+
+% Enforce that beamer prints with \tiny font 
+\setbeamerfont{footnote}{size=\tiny}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hack citation command end: (Do not modify!)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

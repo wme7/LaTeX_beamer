@@ -1,5 +1,7 @@
 % Set Beamer class
-\documentclass{beamer}
+%\documentclass{beamer} % <---- with pauses and transitions
+\documentclass[handout]{beamer} %<--- flat presentation
+
 
 % Set theme and color scheme, see [1].
 \usetheme{Warsaw}
@@ -115,11 +117,9 @@
             \partial_{t} u = \nabla^2 u + \sigma.
         \end{equation}
     \end{alertblock}
-    }
     %
     \pause
     adding the above equations yields:
-    }
     %
     \pause
     \begin{exampleblock}{The advection-diffusion equation:}
@@ -127,7 +127,6 @@
             \partial_{t} u + \nabla\cdot f(u) = \nabla^2 u + \sigma.
         \end{equation}
     \end{exampleblock}
-    }
     %
 \end{frame}
 

@@ -1,0 +1,56 @@
+\documentclass[11pt]{beamer}
+%\documentclass[handout,11pt]{beamer}
+
+% Set theme and color scheme, see [1].
+\usetheme{Madrid}
+\usecolortheme{wolverine}
+
+% Load packages
+\usepackage[style=numeric,sorting=none]{biblatex}
+
+% Let LaTeX know our bibliography data base
+\addbibresource{myReferences.bib}
+
+% Modify the \cite command within Beamer
+\input{hackCitations.tex}
+
+\begin{document}
+
+    \begin{frame}{Literature review\cite{DucrosEtal2000}}%\cite{Pirozzoli2010}}
+        Here we cite the work of Kennedy \& Gruber \cite{KennedyGruber2008}.
+        \vspace{10pt}
+
+        In this template we have redefined the command so that the number of the citation coincides with that in the bibliography.
+        \vspace{10pt}
+
+        Notice that citations in the body, have priority to those on the header.
+    \end{frame}
+
+    \begin{frame}{Citing the same work twice in a single frame\footnote[99]{this is a footnote}}
+        We are using the method of Jiang \& Shu\cite{JiangShu1996}.
+        \vspace{10pt}
+
+        This figure is taken from Jiang \& Shu\cite{JiangShu1996}.
+        \vspace{10pt}
+
+        Notice, that this results in a duplicated footnote.
+    \end{frame}
+
+    \begin{frame}{Citing the same work twice in a single frame\footnote[100]{To avoid duplicated footnotes, we use the command \emph{footnotemark[number]}.}}
+        We are using the method of Jiang \& Shu\cite{JiangShu1996}.
+        \vspace{10pt}
+
+        This figure is taken from Jiang \& Shu\footnotemark[4].
+        \vspace{10pt}
+
+        This is how we reference the same footnote more than once and avoid duplicates.
+    \end{frame}
+
+    \begin{frame}{My References}
+        Printing only the bibliography of the works cited in this document:
+        \vspace{10pt}
+
+        \printbibliography
+    \end{frame}
+
+\end{document}

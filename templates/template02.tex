@@ -1,0 +1,98 @@
+\documentclass[11pt]{beamer}
+%\documentclass[handout,11pt]{beamer}
+\usetheme{Boadilla}
+\usecolortheme{crane}
+
+% Using file contents to create our bibliography
+\begin{filecontents}[overwrite]{\jobname.bib}
+@article{DucrosEtal2000,
+    title={High-order fluxes for conservative skew-symmetric-like schemes in structured meshes: application to compressible flows},
+    author={Ducros, F and Laporte, F and Soul{\`e}res, Th and Guinot, V and Moinat, Ph and Caruelle, B},
+    journal={Journal of Computational Physics},
+    volume={161},
+    number={1},
+    pages={114--139},
+    year={2000},
+    publisher={Elsevier}
+}
+@article{KennedyGruber2008,
+    title={Reduced aliasing formulations of the convective terms within the Navier--Stokes equations for a compressible fluid},
+    author={Kennedy, Christopher A and Gruber, Andrea},
+    journal={Journal of Computational Physics},
+    volume={227},
+    number={3},
+    pages={1676--1700},
+    year={2008},
+    publisher={Elsevier}
+}
+@article{Pirozzoli2010,
+    title={Generalized conservative approximations of split convective derivative operators},
+    author={Pirozzoli, Sergio},
+    journal={Journal of Computational Physics},
+    volume={229},
+    number={19},
+    pages={7180--7190},
+    year={2010},
+    publisher={Elsevier}
+}
+@article{JiangShu1996,
+    title={Efficient implementation of weighted ENO schemes},
+    author={Jiang, Guang-Shan and Shu, Chi-Wang},
+    journal={Journal of computational physics},
+    volume={126},
+    number={1},
+    pages={202--228},
+    year={1996},
+    publisher={Elsevier}
+}
+\end{filecontents}
+
+% Packages
+\usepackage[style=numeric,sorting=none]{biblatex}
+
+% Let LaTeX know our bibliography data base
+\addbibresource{\jobname.bib}
+
+% Modify the \cite command within Beamer
+\input{hackCitations.tex}
+
+\begin{document}
+
+  \begin{frame}{Literature review\cite{DucrosEtal2000}\cite{Pirozzoli2010}}
+        Here we cite the work of Kennedy \& Gruber \cite{KennedyGruber2008}.
+        \vspace{10pt}
+
+        In this template we have redefined the command so that the number of the citation coincides with that in the bibliography.
+        \vspace{10pt}
+
+        Notice that citations in the body, have priority to those on the header.
+  \end{frame}
+
+  \begin{frame}{Citing the same work twice in a single frame\footnote[99]{this is a footnote}}
+        We are using the method of Jiang \& Shu\cite{JiangShu1996}.
+        \vspace{10pt}
+
+        This figure is taken from Jiang \& Shu\cite{JiangShu1996}.
+        \vspace{10pt}
+
+        Notice, that this results in a duplicated footnote.
+  \end{frame}
+
+  \begin{frame}{Citing the same work twice in a single frame\footnote[100]{To avoid duplicated footnotes, we use the command \emph{footnotemark[number]}.}}
+        We are using the method of Jiang \& Shu\cite{JiangShu1996}.
+        \vspace{10pt}
+
+        This figure is taken from Jiang \& Shu\footnotemark[4].
+        \vspace{10pt}
+
+        This is how we reference the same footnote more than once and avoid duplicates.
+  \end{frame}
+
+  \begin{frame}{My References}
+        Printing only the bibliography of the works cited in this document:
+        \vspace{10pt}
+
+        \printbibliography
+  \end{frame}
+
+\end{document}
