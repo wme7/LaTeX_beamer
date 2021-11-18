@@ -20,7 +20,6 @@ To build a simple presentation that helps us become familiar with:
 - S3 : Frame with figures overlays,
 - S3 : The metropolis theme,
 
-
 ## Starting hint:
 ```latex
 % Set Beamer class
