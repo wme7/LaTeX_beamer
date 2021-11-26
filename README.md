@@ -82,9 +82,9 @@ To build a simple presentation that helps us become familiar with:
 
 ## Complementary material in `templates/` :
 Beamer templates with bibliography:
-- [template01.tex](/templates/template_standardBib.tex) : a template with traditional bibliography footnotes.
-- [template02.tex](/templates/template_hackedBid.tex) : a template with costum /cite function and built in bibliography.
-- [template03.tex](/templates/template_fullHackedBid.tex) : a template with costum /cite function with bib-file.
+- [template01.tex](/templates/template01.tex) : a template with traditional bibliography footnotes.
+- [template02.tex](/templates/template02.tex) : a template with costum /cite function and built in bibliography.
+- [template03.tex](/templates/template03.tex) : a template with costum /cite function with bib-file.
 
 ## References
 1. The Beamer theme matrix by [hartwork.org](https://hartwork.org/beamer-theme-matrix/),
