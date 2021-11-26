@@ -4,11 +4,11 @@
 # You want latexmk to *always* run, because make does not have all the info.
 # Also, include non-file targets in .PHONY so they are run regardless of any
 # file of the given name existing.
-.PHONY: main.pdf all clean
+.PHONY: template01.pdf all clean
 
 # The first rule in a Makefile is the one executed by default ("make"). It
 # should always be the "all" rule, so that "make" and "make all" are identical.
-all: main.pdf
+all: template01.pdf
 
 # CUSTOM BUILD RULES
 
@@ -32,8 +32,8 @@ all: main.pdf
 # -interaction=nonstopmode keeps the pdflatex backend from stopping at a
 # missing file reference and interactively asking you for an alternative.
 
-main.pdf: main.tex
-	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make main.tex
+main.pdf: template01.tex
+	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make template01.tex
 
 clean:
 	latexmk -CA

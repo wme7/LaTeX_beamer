@@ -25,6 +25,16 @@
     year={2008},
     publisher={Elsevier}
 }
+@article{BalsaraShu2000,
+  title={Monotonicity preserving weighted essentially non-oscillatory schemes with increasingly high order of accuracy},
+  author={Balsara, Dinshaw S and Shu, Chi-Wang},
+  journal={Journal of Computational Physics},
+  volume={160},
+  number={2},
+  pages={405--452},
+  year={2000},
+  publisher={Elsevier}
+}
 @article{Pirozzoli2010,
     title={Generalized conservative approximations of split convective derivative operators},
     author={Pirozzoli, Sergio},
@@ -48,59 +58,40 @@
 \end{filecontents}
 
 % Packages
-\usepackage[backend=bibtex,style=authoryear-comp]{biblatex}
+\usepackage[style=numeric,sorting=none]{biblatex}
+%\usepackage[backend=bibtex,style=authoryear-comp]{biblatex}
 
 % Let LaTeX know our bibliography data base
 \addbibresource{\jobname.bib}
 
-% Enforce that beamer prints with \tiny font 
-\setbeamerfont{footnote}{size=\tiny}
+% Modify the \cite command within Beamer
+\input{hackCitations.tex}
 
 \begin{document}
 
-    \begin{frame}{Using {\bf cite} command}
-        some text from \cite{KennedyGruber2008}.
-    \end{frame}
+\begin{frame}{Introduction to WENO method.}
+    %
+    These results come from \cite{BalsaraShu2000}.
+    This figure come from \footnotemark[1].\\
+    These results come from \cite{JiangShu1996}.
+    This figure come from \footnotemark[2].\\
+    These results come from \cite{DucrosEtal2000}.
+    This figure come from \footnotemark[3].
+    %
+\end{frame}
 
-    \begin{frame}{Using {\bf footcite} command\footcite{DucrosEtal2000}}%\footcite{Pirozzoli2010}}
-        some text\footcite{KennedyGruber2008}.
-        \vspace{10pt}
+\begin{frame}{Introduction to WENO\cite{JiangShu1996} method.}
+    %
+    These results come from \cite{BalsaraShu2000}.\\
+    These results come from \cite{JiangShu1996}.\\
+    These results come from \cite{DucrosEtal2000}.
+    %
+\end{frame}
 
-        Notice that body citations have priority than citations in the title.
-    \end{frame}
-
-    \begin{frame}{Using {\bf footfullcite} command\footfullcite[1]{DucrosEtal2000}}%\footfullcite[2]{Pirozzoli2010}}
-        some text\footfullcite[3]{KennedyGruber2008}.
-        \vspace{10pt}
-
-        Notice that we have no control on the numeration of footnotes.
-    \end{frame}
-
-    \begin{frame}{Citing the same work twice in a single frame\footnote[99]{this is a footnote}}
-        We are using the method of Jiang \& Shu\footcite{JiangShu1996}.
-        \vspace{10pt}
-
-        This figure is taken from Jiang \& Shu\footcite{JiangShu1996}.
-        \vspace{10pt}
-
-        Notice, that this results in a duplicated footnote.
-    \end{frame}
-
-    \begin{frame}{Citing the same work twice in a single frame\footnote[100]{To avoid duplicated footnotes, we use the command {\bf footnotemark[number]}.}}
-      We are using the method of Jiang \& Shu\footcite{JiangShu1996}.
-      \vspace{10pt}
-
-      This figure is taken from Jiang \& Shu\footnotemark[4].
-      \vspace{10pt}
-
-      This is how we reference the same footnote more than once and avoid duplicates.
-    \end{frame}
-    
-    \begin{frame}{My References}
-      We only print the refenrences that we have cited:
-      \vspace{10pt}
-
-      \printbibliography
-    \end{frame}
+\begin{frame}{The References}
+    %
+    \printbibliography
+    %
+\end{frame}
 
 \end{document}

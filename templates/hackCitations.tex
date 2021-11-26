@@ -39,13 +39,19 @@
   \usebibmacro{begentry}%
   \usebibmacro{author/translator+others}%
   \setunit{\printdelim{nametitledelim}}\newblock
-  \usebibmacro{title}%
+  %\usebibmacro{title}%
   \newunit
   \printlist{language}%
   \newunit\newblock
   \usebibmacro{byauthor}%
   \newunit\newblock
+  \usebibmacro{journal}%
+  \newunit\newblock
   \usebibmacro{date}%
+  \newunit\newblock
+  \printfield{volume}-\printfield{number}%
+  \newunit\newblock
+  \usebibmacro{chapter+pages}%
   \usebibmacro{finentry}}
 \makeatother
 

@@ -6,7 +6,7 @@
 \usecolortheme{wolverine}
 
 % Load packages
-\usepackage[style=numeric,sorting=none]{biblatex}
+\usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex}
 
 % Let LaTeX know our bibliography data base
 \addbibresource{myReferences.bib}
@@ -49,7 +49,11 @@
     \begin{frame}{My References}
         Printing only the bibliography of the works cited in this document:
         \vspace{10pt}
-
+        
+        % Change the fontsize of the references
+        \AtNextBibliography{\footnotesize}
+        
+        % Print the bibliography
         \printbibliography
     \end{frame}
 

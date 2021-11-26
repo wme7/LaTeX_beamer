@@ -78,12 +78,13 @@ To build a simple presentation that helps us become familiar with:
 <img src="./figures/Mach12.png" alt="Supersonic Monopole" width="197"/>
 <img src="./figures/TeXlion.jpg" alt="TeX-logo" width="200"/>
 <img src="./figures/TecNM.png" alt="Uni-Logo" width="200"/>
+<img src="./figures/bibpackages.png" alt="biblatex VS natbib" width="200"/>
 
 ## Complementary material in `templates/` :
 Beamer templates with bibliography:
-- [template01.tex](/snippets/template_standardBib.tex) : a template with traditional bibliography footnotes.
-- [template02.tex](/snippets/template_hackedBid.tex) : a template with costum /cite function and built in bibliography.
-- [template03.tex](/snippets/template_fullHackedBid.tex) : a template with costum /cite function with bib-file.
+- [template01.tex](/templates/template_standardBib.tex) : a template with traditional bibliography footnotes.
+- [template02.tex](/templates/template_hackedBid.tex) : a template with costum /cite function and built in bibliography.
+- [template03.tex](/templates/template_fullHackedBid.tex) : a template with costum /cite function with bib-file.
 
 ## References
 1. The Beamer theme matrix by [hartwork.org](https://hartwork.org/beamer-theme-matrix/),
