@@ -78,7 +78,7 @@ To build a simple presentation that helps us become familiar with:
 <img src="./figures/Mach12.png" alt="Supersonic Monopole" width="197"/>
 <img src="./figures/TeXlion.jpg" alt="TeX-logo" width="200"/>
 <img src="./figures/TecNM.png" alt="Uni-Logo" width="200"/>
-<img src="./figures/bibpackages.png" alt="biblatex VS natbib" width="200"/>
+<img src="./figures/bibPackages.png" alt="biblatex VS natbib" width="200"/>
 
 ## Complementary material in `templates/` :
 Beamer templates with bibliography:
